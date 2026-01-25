@@ -1,1 +1,48 @@
-/* CSS를 활용하여 레이아웃 및 스타일링을 완성해주세요 */
+:root {
+  --green: #03cf5d;
+}
+
+/* header 전체를 가운데 정렬 */
+header {
+  display: flex;
+  justify-content: center;
+  margin-block: 50px;
+}
+
+/* h1은 flex 박스 X → 그냥 감싸는 태그로만 사용 */
+header h1 {
+  margin: 0;
+}
+
+/* input */
+main input {
+  min-width: 290px;
+  min-height: 48px;
+  margin-bottom: 40px;
+  border: 1px solid #dadada;
+}
+
+/* button */
+button {
+  background: var(--green);
+  min-width: 289px;
+  min-height: 56px;
+  border: none;
+  color: white;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  main input,
+  button {
+    width: 100%;
+    max-width: 400px; /* 원하면 제한 */
+  }
+}
